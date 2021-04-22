@@ -1,6 +1,7 @@
 let transactions = [];
 let myChart;
 
+//renders the table with hostorical data
 fetch("/api/transaction")
   .then(response => {
     return response.json();
@@ -136,6 +137,7 @@ function sendTransaction(isAdding) {
   })
   .catch(err => {
     // fetch failed, so save in indexed db
+    // function is called but never defined
     saveRecord(transaction);
 
     // clear form
