@@ -15,7 +15,7 @@ self.addEventListener("install", function (evt) {
     // pre cache transaction data
     // might not be correct syntax
     evt.waitUntil(
-        caches.open(DATA_CACHE_NAME).then((cache) => cache.add("/api/transaction"))
+        caches.open(DATA_CACHE_NAME).then((cache) => cache.add("/api/transaction/bulk"))
     );
     // pre cache all static assets
     evt.waitUntil(
